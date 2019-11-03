@@ -1,0 +1,18 @@
+.newspaper {
+    /* Old Chrome, Safari and Opera */
+    -webkit-column-count: 3;
+    -webkit-column-gap: 40px;
+    -webkit-column-rule-style: solid;
+    margin-right: 150px;
+    margin-left:150px;
+    font-family: helveticaneue;
+  }
+  h1{
+      margin-top: 150px;
+      margin-left: 150px;
+  }
+
+  @font-face{
+    font-family: helveticaneue;
+    src:url(HelveticaNeueLTStd-UltLt.otf);
+  }
