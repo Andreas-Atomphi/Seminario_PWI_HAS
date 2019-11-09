@@ -2,48 +2,45 @@
 @font-face
 {
   font-family: times-new-roman-14;
-  src: url(_fnt/times-new-roman-14);
+  src: url(_fnt/times-new-roman-14.ttf);
 }
 html, body
 {
   margin: 0;
   width: 100%;
   height: 100%;
+  padding: 0;
 }
 .newspaper {
   /* Old Chrome, Safari and Opera */
   position: relative;
+  background-color: white;
   margin-top: 40vh;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 40px;
   margin-right: 150px;
   margin-left:150px;
   width: 70vw;
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+  padding: 10px;
   z-index: 2;
+  border-radius: 30px;
+}
+.bgparallax {
+  background-image: url("../_img/n1/dna1.png");
+  background-position: center;
+  background-attachment: scroll;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+.newscontent {
+  /* Old Chrome, Safari and Opera */
+  position: relative;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 40px;
 }
 .header
 {
   z-index: 0;
-}
-.bg
-{
-  background-image: url("../_img/n1/dna1.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  transform-style: preserve-3d;
-}
-.bg::before
-{
-  content: "";
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 1;
-  transform: translateZ(-1px) scale(2);
 }
 h1{
   font-family: Questrial;
@@ -56,8 +53,4 @@ p
   font-family: times-new-roman-14;
   text-align: justify;
   margin: 2px 0 2px 0px;
-}
-img
-{
-  width: 300px;
 }
