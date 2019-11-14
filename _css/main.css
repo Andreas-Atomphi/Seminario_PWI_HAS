@@ -1,36 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @font-face
 {
   font-family: times-new-roman-14;
   src: url(_fnt/times-new-roman-14.ttf);
 }
-html, body
+html, main
 {
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
   height: auto;
   padding: 0;
-  overflow-y: hidden;
 }
 .newspaper {
   /* Old Chrome, Safari and Opera */
   position: relative;
-  background-color: white;
-  margin-top: 20vh;
-  width: 100vw;
-  height: auto;
+  background-color: #333;
+  max-width: 100vw;
+  min-height: 100%;
   padding: 10px;
   z-index: 2;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .newscontent {
   /* Old Chrome, Safari and Opera */
+  color: white;
+  background-color: #333;
+  max-width: 100vw;
   position: relative;
   -webkit-column-count: 3;
   -webkit-column-gap: 40px;
 }
 .header
 {
-  z-index: 0;
+  position: fixed;
+  perspective:0;
+  z-index: 7;
+  width: 100%;
 }
 h1{
   font-family: Questrial;
@@ -38,13 +46,21 @@ h1{
   text-align: left;
   margin: 0px;
 }
+h2
+{
+  color: #DDA500;
+}
 p
 {
-  font-family: times-new-roman-14;
+  font-family: Questrial;
   text-align: justify;
   margin: 2px 0px 15px 0px;
 }
-
+.bgcard
+{
+  margin: 0;
+  right: 4px;
+}
 /*
 .parallax {
 
@@ -70,7 +86,6 @@ p
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .wrapper {
   /* O elemento precisa ter uma altura definida para o efeito
   funcionar.
