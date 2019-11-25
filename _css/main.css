@@ -87,6 +87,8 @@ p
 {
   margin: 0;
   right: 4px;
+  height: 100%;
+  width: 100%;
 }
 /*
 .parallax {
@@ -217,14 +219,14 @@ h5.card-title{
 .card-img-top{
   background-size: 1000px;
   background-repeat: no-repeat;
-  position: absolute;/*valor antigo--> relative*/
+  position: relative;/*valor antigo--> relative*/
   background-position-y: 0;
-  height:150px;
+  min-height:150px;
   transition: 1s;
 }
 .card h5.card-title
 {
-  margin-top: 140px;
+  
 }
 
 .card-title-cont
@@ -234,7 +236,7 @@ h5.card-title{
   min-height: 30px;
 }
 .card-img-top:hover{
-  height:298px;
+  min-height:298px;
   transition: 1s;
   background-position-y: center;
   border-bottom-left-radius: 0.25rem;
