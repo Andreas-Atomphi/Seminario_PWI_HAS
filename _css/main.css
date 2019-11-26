@@ -111,6 +111,7 @@ p
 .middle {
   position: absolute;
   top: 50%;
+  color: #FFF;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -200,11 +201,6 @@ h5.card-title{
 }
 .card-body{
   color:#333;
-}
-
-.hindex{
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 .bgparallax {
