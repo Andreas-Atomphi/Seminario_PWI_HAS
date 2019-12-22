@@ -2,74 +2,74 @@
 <html lang="pt-br">
 
     <head>
-        <meta charset="pt-br">
-        <title>HAS Technews</title>
+        <meta charset="utf-8">
+        <title>Cadastro - HAS Technews</title>
         <link rel="stylesheet" type="text/css" href="_css/main.css">
         <link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
         <script type="text/javascript" src="_js/func.js"></script>
     </head>
     <main class="wrapper">
-        <div class="header">
-            <div class="header">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">
-                        <div class="logo-container">
-                            <img src="_img/HAS_Technews_logo.png" class="logo" />
-                        </div>
-                    </a>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="NoticiasIndex.html">Noticias <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="cadastro.html">Cadastro <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+
+       <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo-container">
+                        <img src="_img/HAS_Technews_logo.png" class="logo" />
+                    </div>
+                </a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="hall_n.html">Noticias <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cadastro.html">Cadastre-se <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
         <div class="cadastro">
-            <form>
+            <form action="cadastro.html" method="get">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputName4">Email</label>
+                        <label for="inputName4">Nome</label>
                         <input type="text" class="form-control" id="inputName4" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputNome4">Senha</label>
-                        <input type="text" class="form-control" id="inputName4" placeholder="Sobrenome">
+                        <label for="inputSName4">Sobrenome</label>
+                        <input type="text" class="form-control" id="SinputName4" placeholder="Sobrenome">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
                         <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                     </div>
+                    <div class="form-group col-md-6"></div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Senha</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                        <input type="password" class="form-control" name="nPass" id="inputPassword4" placeholder="Senha" onkeyup="alertpass.value = checkPasswd(nPass.value, cPass.value)" onclick="alertpass.value = checkPasswd(nPass.value, cPass.value)">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputNumber4">CPF</label>
-                        <input type="number" class="form-control" id="inputNumber4" placeholder="Digite o CPF">
-                    </div>
+                        <label for="inputPassword4">Confirme sua Senha</label>
 
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Clique em mim
-                            </label>
-                        </div>
+                        <input type="password" class="form-control" name="cPass" id="inputPassword4" placeholder="Insira sua senha aqui" onkeyup="alertpass.value = checkPasswd(nPass.value, cPass.value)" onclick="alertpass.value = checkPasswd(nPass.value, cPass.value)">
+
+                        <input type="text" id="alertpass" style="all: unset; font-size: 0.75rem;" disabled="true">
                     </div>
-                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <div class="form-group col-md-6">
+                        <label for="inputNumber4">CPF</label><br/>
+                        <input type="text" name="CPF" class="form-control" id="inputNumber4" placeholder="Digite o CPF" maxlength="14">
+                        <input type="text" name="cpfAlert" id="alert" style="all: unset; font-size: 0.75rem;" disabled="true">
+                    </div>
+                    <br />
+                    <div>
+                </div>
+                <div>
+                    <br/><br/><br/><br/>
+                    <input type="button" value="Enviar" class="btn btn-primary" onclick="cpfAlert.value = checkCPF(CPF.value);" />
+                </div>
             </form>
         </div>
     </main>
